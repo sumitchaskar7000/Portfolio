@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Chaskar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <canvas id="rainbow-canvas"></canvas>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Sumit Chaskar</a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="resume-btn" id="resumeBtn">Resume</button>
+          <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+            <span class="moon">🌙</span>
+            <span class="sun">☀️</span>
+          </button>
+        </div>
+        <div class="nav-social-links">
+          <a href="https://leetcode.com/u/sumitchaskar/" aria-label="LeetCode" class="social-icon leetcode" target="_blank" rel="noopener">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34.5 6L13.5 24L34.5 42" stroke="#FFA116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5 24H42" stroke="#FFA116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="https://github.com/sumitchaskar7000" aria-label="GitHub" class="social-icon github" target="_blank" rel="noopener">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.58 2 12.26C2 16.62 4.87 20.26 8.84 21.54C9.34 21.64 9.52 21.36 9.52 21.12C9.52 20.91 9.51 20.3 9.51 19.5C7 20.09 6.35 18.5 6.35 18.5C5.91 17.41 5.3 17.13 5.3 17.13C4.38 16.5 5.37 16.51 5.37 16.51C6.38 16.59 6.89 17.64 6.89 17.64C7.78 19.19 9.22 18.75 9.77 18.51C9.87 17.81 10.14 17.34 10.44 17.09C8.19 16.84 5.85 15.98 5.85 12.77C5.85 11.81 6.19 11.04 6.75 10.43C6.65 10.18 6.36 9.22 6.85 7.94C6.85 7.94 7.6 7.67 9.5 8.89C10.2 8.7 10.95 8.6 11.7 8.6C12.45 8.6 13.2 8.7 13.9 8.89C15.8 7.67 16.55 7.94 16.55 7.94C17.04 9.22 16.75 10.18 16.65 10.43C17.21 11.04 17.55 11.81 17.55 12.77C17.55 15.99 15.2 16.83 12.95 17.08C13.34 17.39 13.7 18.01 13.7 19.01C13.7 20.36 13.69 21.36 13.69 21.12C13.69 21.36 13.87 21.65 14.37 21.54C18.34 20.26 21.21 16.62 21.21 12.26C21.21 6.58 16.73 2 12 2Z" fill="#181717"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sumit-chaskar/" aria-label="LinkedIn" class="social-icon linkedin" target="_blank" rel="noopener">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" fill="#0077B5"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text">Sumit Chaskar</span></h1>
+        <h2 class="hero-subtitle">Full Stack Developer & UI/UX Designer</h2>
+        <p class="hero-intro">I craft beautiful, modern web experiences with a focus on clean code and delightful UI/UX.
+          Currently working on exciting projects using React, Node.js, and modern web technologies.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="cta-btn primary">View My Work</a>
+          <a href="#contact" class="cta-btn secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="creative-box-section">
+      <div class="container">
+        <div class="creative-box">
+          <div class="box-grid">
+            <div class="box-image">
+              <img src="img/smith.jpeg" alt="Sumit's Profile Picture" class="feature-image">
+            </div>
+            <div class="box-content">
+              <h2 class="box-title">About <span class="gradient-text">Me</span></h2>
+              <p class="box-description">Full Stack Developer with expertise in building modern web applications.
+                Passionate about creating efficient, scalable solutions using cutting-edge technologies.</p>
+              <div class="box-features">
+                <div class="feature">
+                  <div class="feature-icon">💻</div>
+                  <h3>Full Stack Development</h3>
+                  <p>React, Node.js, MongoDB</p>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">🎯</div>
+                  <h3>Problem Solver</h3>
+                  <p>Analytical & Solution-driven</p>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">🚀</div>
+                  <h3>Quick Learner</h3>
+                  <p>Adaptable to new technologies</p>
+                </div>
+              </div>
+              <div class="box-cta">
+                <a href="#contact" class="cta-btn primary">Get in Touch</a>
+                <a href="#projects" class="cta-btn secondary">View Projects</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container about-content">
+        <h2 class="section-title">Experience & Education</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="bio-section">
+              <h3>Full Stack Developer</h3>
+              <p>Hello! I'm Sumit Chaskar, a motivated and hardworking Computer Engineering graduate with hands-on
+                experience in full-stack development. I specialize in building real-time web applications using Java,
+                React, Node.js, and MongoDB.</p>
+              <p>My journey in technology began with a diploma in Information Technology, followed by a B.Tech in
+                Computer Engineering. Throughout my academic and professional journey, I've developed a strong
+                foundation in both frontend and backend technologies.</p>
+            </div>
+
+            <div class="education-section">
+              <h4>Education</h4>
+              <div class="education-item">
+                <h5>Dr. D.Y. Patil College of Engineering and Innovation</h5>
+                <p class="degree">B.Tech in Computer Engineering</p>
+                <p class="duration">2021 – 2024</p>
+                <p class="achievement">CGPA: 8.4</p>
+              </div>
+              <div class="education-item">
+                <h5>Dr. D.Y. Patil Polytechnic</h5>
+                <p class="degree">Diploma in Information Technology</p>
+                <p class="duration">2019 – 2021</p>
+                <p class="achievement">Percentage: 80.19%</p>
+              </div>
+            </div>
+
+            <div class="awards-section">
+              <h4>Awards & Achievements</h4>
+              <div class="award-item">
+                <h5>Technophilia 2024 Project Exhibition</h5>
+                <p class="award-title">Second Runner-up</p>
+                <p class="award-description">Recognized for the innovative "Cotton Disease Prediction using Machine
+                  Learning" project, demonstrating impactful agricultural solutions.</p>
+              </div>
+            </div>
+
+            <div class="experience-section">
+              <h4>Professional Experience</h4>
+              <div class="experience-item">
+                <h5>Zensar Technologies</h5>
+                <p class="role">Trainee Employee Skill Development Program</p>
+                <p class="duration">April 2023 - June 2023</p>
+                <ul>
+                  <li>Developed the backend of a web application using SQL, PL/SQL, Core Java, and SQL Server</li>
+                  <li>Optimized databases with SQL Server, ensuring smooth application integration</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <h5>Elite Software</h5>
+                <p class="role">Web Developer, Python-Django Framework</p>
+                <p class="duration">January 2023 - March 2023</p>
+                <ul>
+                  <li>Built responsive and optimized web interfaces using HTML, CSS, and JavaScript</li>
+                  <li>Developed backend solutions with Django Framework</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card featured">
+            <div class="project-emoji">🤖</div>
+            <div class="project-content">
+              <h3>Gemini AI Clone</h3>
+              <p class="tech-stack">React.js, Google Gemini API, Tailwind CSS, Vite</p>
+              <p>A modern AI chat application that replicates Google's Gemini interface, allowing users to interact with
+                AI for various tasks including text generation, code assistance, and creative writing.</p>
+              <ul class="project-features">
+                <li>Real-time AI chat interface using Google Gemini API</li>
+                <li>Support for text and code generation</li>
+                <li>Markdown rendering for code blocks</li>
+                <li>Chat history management</li>
+                <li>Responsive design with dark/light mode</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://github.com/sumitchaskar7000/Gemini_Clone" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-emoji">🌱</div>
+            <div class="project-content">
+              <h3>Canmax - Agriculture Products Website</h3>
+              <p class="tech-stack">React.js, TypeScript, Tailwind CSS, Framer Motion</p>
+              <p>A modern, responsive website for Canmax, an agriculture-based company that showcases agricultural
+                products, blog content, and educational resources for farmers.</p>
+              <ul class="project-features">
+                <li>Responsive design optimized for all devices</li>
+                <li>Product catalog with filtering and search</li>
+                <li>Detailed product pages with specifications</li>
+                <li>Modern UI with smooth animations</li>
+                <li>Contact form with validation</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://canmaxindia.com" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://github.com/sumitchaskar7000/Canmax" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-emoji">🧬</div>
+            <div class="project-content">
+              <h3>Cotton Disease Prediction</h3>
+              <p class="tech-stack">React, Flask, Tailwind CSS, Python, MongoDB</p>
+              <p>Engineered a full-stack application leveraging React and Flask to predict cotton crop diseases with
+                over 90% accuracy. Integrated deep learning CNN models for disease identification.</p>
+              <ul class="project-features">
+                <li>90%+ accuracy in disease prediction</li>
+                <li>Deep learning CNN model integration</li>
+                <li>20% improvement in crop yield</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://github.com/sumitchaskar7000/Cotton-Disease-Prediction-Using-Machine-learning" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-content">
+        <h2 class="section-title">Get in Touch</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <span class="error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <span class="error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <span class="error" id="messageError"></span>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Sumit Chaskar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
